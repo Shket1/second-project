@@ -1,3 +1,5 @@
+@import url(animation/animation__rotation.css);
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -24,6 +26,10 @@ h5 {
   font-style: normal;
 }
 
+.link:hover {
+  opacity: 0.6;
+  transition: opacity .1s linear;
+}
 /*HEADER*/
 
 .header {
@@ -34,6 +40,7 @@ h5 {
   max-height: 756px;
   background-color: #f2f2f2;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .header__logo {
@@ -82,6 +89,7 @@ h5 {
   background-color: #2f80ed;
   height: 568px;
   width: 568px;
+  animation: rotation 20s linear infinite;
 }
 
 /*DESCRIPTION*/
@@ -128,6 +136,50 @@ h5 {
 
 .description__two-columns_span-accent {
   font-weight: 600;
+}
+
+/*tehnique*/
+
+.tehniques{
+  width: 80%;
+  margin: 0 auto 100px auto;
+}
+
+/*div {
+  border: 1px solid red;
+}*/
+
+.cards {
+  display: flex;
+  width: 920px;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+.cards__item {
+  width: 240px;
+  margin-right: 100px;
+  text-align: center;
+}
+.cards__item:nth-last-of-type(3n) {
+  margin-right: 0;
+}
+
+.cards__item_image {
+  margin: 60px 40px 43px 40px;
+  border-radius: 160px;
+}
+
+.cards__item_title{
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.cards__item_description {
+  line-height: 23px;
+  font-size: 18px;
+  font-style: normal;
+  margin: 0;
 }
 
 /*DIGITS*/
